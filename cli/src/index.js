@@ -1,13 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import h from "react-hyperscript"
+import 'aframe';
 
 import "index.scss";
 
-let HelloWorld = () => {
-  return <h1>Hello React!!</h1>
+let Box=()=>{
+  return h('a-box',{color:'red',position:'0 0 -4'})
 }
 
 ReactDOM.render(
-  <HelloWorld/>,
+  h('a-scene',{background:'color:#CCC'},[
+    h(Box)
+  ]),
   document.getElementById("root")
 );
