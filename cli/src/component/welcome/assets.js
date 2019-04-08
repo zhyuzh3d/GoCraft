@@ -7,11 +7,11 @@ import 'aframe';
 let dom = h('a-assets', {}, [
     h('a-asset-item', {
         id: 'optimerBoldFont',
-        src: 'assets/font/optimer_bold.typeface.json'
+        src: '/assets/font/optimer_bold.typeface.json'
     }),
     h('a-asset-item', {
         id: 'engine',
-        src: 'assets/3d/engine.glb'
+        src: '/assets/3d/engine.glb'
     }),
 ])
 

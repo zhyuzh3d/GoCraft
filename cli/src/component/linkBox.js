@@ -4,11 +4,6 @@ import ReactDOM from "react-dom";
 import h from "react-hyperscript"
 import 'aframe';
 
-
-function cc(a) {
-    alert(a)
-}
-
 let gen = (position, size, clr, txt,href) => {
     return h('a-entity', {
         position,
@@ -50,11 +45,8 @@ export default class myComponent extends React.Component {
         var dom = ReactDOM.findDOMNode(this);
         var tarEl = dom.querySelector('#tar');
         tarEl.addEventListener('click', function () {
-            //cc(boxEl.getAttribute('id'))
-            // console.log(dom)
             location=dom.getAttribute('href')
         });
-
     }
     render() {
         return gen(this.props.position,

@@ -42,6 +42,9 @@ module.exports = {
         new CopyPlugin([{
                 from: 'assets',
                 to: 'assets'
+            },{
+                from: 'src/p',
+                to: 'p'
             }
         ]),
     ]
