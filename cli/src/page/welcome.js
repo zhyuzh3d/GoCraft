@@ -27,21 +27,24 @@ let dom = h('a-scene', {
         size: size,
         text: 'show',
         color: '#AFA',
-        href: 'p/show.html'
+        href: 'p/show.html',
+        label:'表演台'
     }),
     h(linkBox, {
         position: '0 0 -7',
         size: size,
         text: 'train',
         color: '#AAF',
-        href: 'p/train.html'
+        href: 'p/train.html',
+        label:'训练场',
     }),
     h(linkBox, {
         position: '-5 0 -7',
         size: size,
         text: 'learn',
         color: '#FAF',
-        href: 'p/learn.html'
+        href: 'p/learn.html',
+        label:'学习营'
     }),
 ])
 
