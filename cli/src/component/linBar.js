@@ -3,48 +3,32 @@ import React from "react";
 import ReactDOM from "react-dom";
 import h from "react-hyperscript"
 import 'aframe';
-import 'aframe-text-geometry-component';
 import 'aframe-html-shader';
 
 let gen = (position, size, clr, txt, href, label, labelId) => {
     return h('a-entity', {
         position,
-        scale: '' + size + ' ' + size + ' ' + size,
         href,
     }, [
         h('a-entity', {
             geometry: "primitive: plane",
-            position: "0 -0.75 0",
-            scale: "0.25 0.25 0.25",
+            position: "0 0.01 -0.03",
+            scale: "0.2 0.2 0.2",
             material: "shader:html;\
             target:#" + labelId + ";\
             transparent:true;\
+            blending:additive;\
             ratio:height;\
             fps:1;"
         }),
         h('a-box', {
-            material: "side:double;color:" + clr + ";\
-            blending:additive;\
-            opacity:0.2,\
-            metalness:0.8",
-        }),
-        h('a-box', {
             id: 'tar',
+            scale: '1 0.25 0.1',
             class: 'clickable',
             material: "side:double;color:" + clr + ";\
             blending:additive;\
             opacity:0.2,\
             metalness:0.8",
-            scale: '1.2 1.2 1.2'
-        }),
-        h('a-entity', {
-            material: 'metalness: 0.85;color:' + clr,
-            position: "-0.4 -0.08 0",
-            'text-geometry': "value:" + txt.toUpperCase() + "; \
-            font: #optimerBoldFont;\
-            height:0.1;\
-            size:0.2;\
-            curveSegments:1"
         }),
     ])
 }

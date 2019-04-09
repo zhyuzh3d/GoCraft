@@ -12,6 +12,7 @@ import env from "../component/welcome/env"
 import cam from "../component/welcome/cam"
 
 import linkBox from "../component/linkBox"
+import linkBar from "../component/linBar"
 
 let size = 3;
 
@@ -45,6 +46,18 @@ let dom = h('a-scene', {
         color: '#FAF',
         href: 'p/learn.html',
         label:'学习营'
+    }),
+    h(linkBar, {
+        position: '-0.6 -1.1 -2',
+        color: '#6F6',
+        href: 'p/login.html',
+        label:'登录注册'
+    }),
+    h(linkBar, {
+        position: '0.6 -1.1 -2',
+        color: '#66F',
+        href: 'p/about.html',
+        label:'探索故事'
     }),
 ])
 
