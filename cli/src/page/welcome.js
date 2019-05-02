@@ -24,10 +24,10 @@ let dom = h('a-scene', {
     h(lights),
     h(cam),
     h(linkBox, {
-        position: '5 0 -7',
+        position: '-5 0 -7',
         size: size,
         text: 'show',
-        color: '#AFA',
+        color: '#FAF',
         href: 'p/show.html',
         label:'表演台'
     }),
@@ -40,10 +40,10 @@ let dom = h('a-scene', {
         label:'训练场',
     }),
     h(linkBox, {
-        position: '-5 0 -7',
+        position: '5 0 -7',
         size: size,
         text: 'learn',
-        color: '#FAF',
+        color: '#AFA',
         href: 'p/learn.html',
         label:'学习营'
     }),
@@ -55,7 +55,7 @@ let dom = h('a-scene', {
     }),
     h(linkBar, {
         position: '0.6 -1.1 -2',
-        color: '#66F',
+        color: '#F86',
         href: 'p/about.html',
         label:'探索故事'
     }),
